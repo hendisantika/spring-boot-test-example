@@ -1,5 +1,7 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/testDB?createDatabaseIfNotExist=true
+    username: root
+    password: root
   jpa:
     open-in-view: true
