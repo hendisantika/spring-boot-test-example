@@ -53,7 +53,7 @@ public class RemoteVehicleDetailsServiceTest {
     @Test
     public void getVehicleDetailsWhenResultIsSuccessShouldReturnDetails() {
         this.server.expect(requestTo("/vehicle/" + VIN + "/details"))
-                .andRespond(withSuccess(getClassPathResource("vehicledetails.json"),
+                .andRespond(withSuccess(getClassPathResource("/sample/test/service/vehicledetails.json"),
                         MediaType.APPLICATION_JSON));
         VehicleDetails details = this.service
                 .getVehicleDetails(new VehicleIdentificationNumber(VIN));
