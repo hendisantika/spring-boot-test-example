@@ -29,8 +29,8 @@ public class VehicleDetailsJsonTest {
     @Test
     public void serializeJson() throws Exception {
         VehicleDetails details = new VehicleDetails("Honda", "Civic");
-        assertThat(this.json.write(details)).isEqualTo("vehicledetails.json");
-        assertThat(this.json.write(details)).isEqualToJson("vehicledetails.json");
+        assertThat(this.json.write(details)).isEqualTo("/sample/test/service/vehicledetails.json");
+        assertThat(this.json.write(details)).isEqualToJson("/sample/test/service/vehicledetails.json");
         assertThat(this.json.write(details)).hasJsonPathStringValue("@.make");
         assertThat(this.json.write(details)).extractingJsonPathStringValue("@.make")
                 .isEqualTo("Honda");
