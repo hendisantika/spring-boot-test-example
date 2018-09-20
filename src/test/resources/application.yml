@@ -2,3 +2,6 @@ spring:
   test:
     mockmvc:
       print: none
+  datasource:
+    url:
+
